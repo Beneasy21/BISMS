@@ -4,6 +4,7 @@ class DatabaseObject{
 static protected $database;
 static protected $table_name;
 static protected $columns = [];
+protected $dec_pin;
 public $errors = [];
 
 static public function set_database($database){
@@ -12,14 +13,14 @@ static public function set_database($database){
 
 static public function find_by_sql($sql){
 	$result = self::$database->query($sql);
-	if(!result){
+	if(!$result){
 		exit("Database Query failed");
 	}
 
 	//results into objects
 	$object_array = [];
 	while($record = $result->fetch_assoc()){
-		$object_array[ = static::instantiate($record)];
+		$object_array[] = static::instantiate($record);
 	}
 	$result->free();
 	return $object_array;
@@ -60,7 +61,7 @@ static protected function instantiate($record) {
     return $object;
   }
 
-  protected function validate() {
+protected function validate() {
     $this->errors = [];
 
     // Add custom validations
@@ -153,10 +154,19 @@ public function delete() {
     // calling $user->delete().*/
   }
 
+protected function encrypt_it($data){
+        
+        $dec_pin = openssl_encrypt($data, "AES-128-ECB", PINKEY);
+        return $dec_pin;
+      }
+
+protected function decrypt_it($data){
+        
+        $dec_pin = openssl_decrypt($data, "AES-128-ECB", PINKEY);
+
+        return $dec_pin;
+      }
+
 }
 
-?>
-
-
-}
 ?>

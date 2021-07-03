@@ -19,7 +19,7 @@
 
   require_once('functions.php');
   require_once('status_error_functions.php');
-  require_once('db_credentials.php');
+  require_once('db_data.php');
   require_once('database_functions.php');
   require_once('validation_functions.php');
 
@@ -43,6 +43,6 @@
   $database = db_connect();
   DatabaseObject::set_database($database);
 
-  //$session = new Session;
+  $session = new Session;
 
 ?>
