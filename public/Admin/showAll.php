@@ -1,7 +1,7 @@
 <?php
   require_once('../../private/initialize.php');
-  //require_login();
-  //$_SESSION['admin_id'] = '';
+  require_login();
+  
 
 $admins = Admin::find_all();
   

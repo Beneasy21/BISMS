@@ -1,6 +1,6 @@
 <?php
   require_once('../../private/initialize.php');
-  //require_login();
+  require_login();
 
   $page_title = 'Command:: Result Home';
   include(SHARED_PATH . '/adminHeader.php');
@@ -28,6 +28,7 @@
         <div class="col text-left">
           Email : <?php echo $admin->email ?? '' ;?><br />
           Phone : <?php echo $admin->username ?? '';?><br />
+          <?php var_dump($_SESSION); ?>
         </div>        
       </div>
 

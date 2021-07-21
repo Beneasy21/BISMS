@@ -11,7 +11,7 @@ if(is_post_request()) {
   if($result === true) {
     $new_id = $acadYr->id;
     $session->message('Acad Year created Successfully.');
-    redirect_to(urlFor('/acadYr/show.php?id=' . $new_id));
+    redirect_to(urlFor('/admin/acadYr/show.php?id=' . $new_id));
   } else {
     //Show Errors$errors = $result;
   }

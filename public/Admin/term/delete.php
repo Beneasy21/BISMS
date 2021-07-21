@@ -41,7 +41,7 @@ if(is_post_request()) {
       <div class="row">
         <div class="col">
           <a class="mr-2 back-link" href="<?php echo urlFor('/admin/term/index.php'); ?>">&laquo; Back to List</a> || 
-          <a  href="<?php echo urlFor('/admin/term/new.php'); ?>"> Add Term</a>
+          <a  href="<?php echo urlFor('/admin/term/new.php'); ?>"> Add New</a>
           <hr>
         </div>
       </div>

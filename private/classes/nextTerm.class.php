@@ -16,7 +16,34 @@ class NextTerm extends DatabaseObject {
     $this->vTerm = $args['vTerm'] ?? '';
     $this->explanation = $args['explanation'] ?? '';
   }
-  
+
+  public function nextTermBegins($Session, $Term){
+    $sql = "select explanation FROM " . static::$table_name;
+    $sql .= " WHERE acadYr = '".$Session."' AND vterm = '".$Term."'";
+    //echo $sql;
+    $obj_array = static::find_by_sql($sql);
+    if(!empty($obj_array)) {
+      return array_shift($obj_array);
+    } else {
+      return false;
+    }
+    
+  }
+
+  public function newSessionBegins($Session){
+    $sql = "select explanation FROM " . static::$table_name;
+    $sql .= " WHERE acadYr = '".$Session."' AND vterm = '3'";
+    //echo $sql;
+    $obj_array = static::find_by_sql($sql);
+    if(!empty($obj_array)) {
+      return array_shift($obj_array);
+    } else {
+      return false;
+    }
+    
+  }
+
+    
   protected function validate() {
     $this->errors = [];
 

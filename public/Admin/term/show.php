@@ -27,8 +27,9 @@ $term = Term::find_by_id($id);
         <div class="col text-center">
             <a class="back-link" href="<?php echo urlFor('/admin/index.php'); ?>">&laquo; Back to Admin Home</a> || 
             <a class="back-link" href="<?php echo urlFor('/admin/term/index.php'); ?>">&laquo; Back to List</a> || 
-            <a class="back-link" href="<?php echo urlFor('/admin/term/new.php'); ?>">&laquo; Add Term</a> || 
-            <a class="back-link" href="<?php echo urlFor('/admin/term/edit.php?id='.h(u($term->id))); ?>">Edit</a>
+            <a class="back-link" href="<?php echo urlFor('/admin/term/new.php'); ?>">&laquo; Add New</a> || 
+            <a class="back-link" href="<?php echo urlFor('/admin/term/edit.php?id='.h(u($term->id))); ?>">Edit</a> || 
+            <a class="back-link" href="<?php echo urlFor('/admin/term/delete.php?id='.h(u($term->id))); ?>">Delete</a>
         </div>        
       </div>
       <div class="row mx-auto">

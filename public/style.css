@@ -979,10 +979,10 @@ div.tab button.active,
     width: 100%;
 }
 
-.table-bordered thead td,
+/*.table-bordered thead td,
 .table-bordered thead th {
     border: 0 none;
-}
+}*/
 
 .page-title {
     position: relative;

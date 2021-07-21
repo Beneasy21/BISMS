@@ -11,7 +11,7 @@ if(is_post_request()) {
   if($result === true) {
     $new_id = $term->id;
     $session->message('Term created Successfully.');
-    redirect_to(urlFor('/term/show.php?id=' . $new_id));
+    redirect_to(urlFor('/admin/term/show.php?id=' . $new_id));
   } else {
     //Show Errors$errors = $result;
   }

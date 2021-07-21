@@ -10,15 +10,17 @@
            ?>    
           <hr>
           <p class="text-left p-0 m-0">
-            <a href="<?php echo urlFor('/admin/staff/');?>">Staff</a><br />
-            <a href="<?php echo urlFor('/admin/Student/');?>">Students</a><br />
-            <a href="<?php echo urlFor('/admin/staff/');?>">Classs</a><br />
-            <a href="<?php echo urlFor('/admin/Student/');?>">Arm</a><br />
+            <a href="<?php echo urlFor('/admin/staff/index.php');?>">Staff</a><br />
+            <a href="<?php echo urlFor('/admin/Student/index.php');?>">Students</a><br />
+            <a href="<?php echo urlFor('/admin/clax/index.php');?>">Classs</a><br />
+            <a href="<?php echo urlFor('/admin/arm/index.php');?>">Arm</a><br />
             <a href="<?php echo urlFor('/admin/term/index.php');?>">Term</a><br />
             <a href="<?php echo urlFor('/admin/acadYr/index.php');?>">Session</a><br />
-            <a href="<?php echo urlFor('/admin/staff/');?>">House</a><br />
-            <a href="<?php echo urlFor('/admin/Student/');?>">Result</a><br />
+            <a href="<?php echo urlFor('/admin/house/index.php');?>">House</a><br />
+            <a href="<?php echo urlFor('/admin/rexult/index.php');?>">Results</a><br />
             <a href="<?php echo urlFor('/admin/nextTerm/index.php');?>">Next Term</a><br />
+            <a href="<?php echo urlFor('/admin/subjects/index.php');?>">Subjects</a><br />
+            <a href="<?php echo urlFor('/admin/logout.php');?>">Logout</a><br />
           </p>
         </div>
       </div>

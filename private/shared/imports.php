@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>FAME &mdash; <?php echo $pageTitle ?? ''; ?>	</title>
+	<title><?php echo $page_title ?? ''; ?>	</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -40,8 +40,7 @@
 	<!-- Flexslider  -->
 	<link rel="stylesheet" href="<?php echo urlFor('css/flexslider.css');?>">
 
-	<!-- Pricing -->
-	<link rel="stylesheet" href="<?php echo urlFor('css/pricing.css');?>">
+	
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="<?php echo urlFor('css/style.css');?>">
@@ -49,7 +48,7 @@
 
 	<!-- My Own Stylesheets -->
 	<link rel="stylesheet" type="text/css" href="<?php //echo urlFor('stylesheets/bootstrap.min.css');?>" />
-    <link rel="stylesheet" type="text/css" href="<?php echo urlFor('stylesheets/myStyles.css'); ?>" />
+    <!-- link rel="stylesheet" type="text/css" href="<?php echo urlFor('stylesheets/myStyles.css'); ?>" /-->
     <link rel="stylesheet" type="text/css" href="<?php //echo urlFor('stylesheets/custom.css'); ?>" />
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 	

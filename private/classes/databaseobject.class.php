@@ -28,6 +28,7 @@ static public function find_by_sql($sql){
 
 static public function find_all() {
     $sql = "SELECT * FROM " . static::$table_name;
+    $sql .= " LIMIT 100";
     return static::find_by_sql($sql);
   }
 

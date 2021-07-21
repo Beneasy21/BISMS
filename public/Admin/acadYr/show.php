@@ -6,7 +6,7 @@
 $id = h($_GET['id']) ?? ''; // PHP > 7.0
 
 $acadYr = AcadYr::find_by_id($id);
-var_dump($acadYr);
+//var_dump($acadYr);
 
 ?>
 
@@ -29,7 +29,8 @@ var_dump($acadYr);
             <a class="back-link" href="<?php echo urlFor('/admin/index.php'); ?>">&laquo; Back to Admin Home</a> || 
             <a class="back-link" href="<?php echo urlFor('/admin/acadYr/index.php'); ?>">&laquo; Back to List</a> || 
             <a class="back-link" href="<?php echo urlFor('/admin/acadYr/new.php'); ?>">&laquo; Add New</a> || 
-            <a class="back-link" href="<?php echo urlFor('/admin/acadYr/edit.php?id='.h(u($acadYr->id))); ?>">Edit</a>
+            <a class="back-link" href="<?php echo urlFor('/admin/acadYr/edit.php?id='.h(u($acadYr->id))); ?>">Edit</a> || 
+            <a class="back-link" href="<?php echo urlFor('/admin/acadYr/delete.php?id='.h(u($acadYr->id))); ?>">Delete</a>
         </div>        
       </div>
       <div class="row mx-auto">

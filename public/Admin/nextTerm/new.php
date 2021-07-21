@@ -11,7 +11,7 @@ if(is_post_request()) {
   if($result === true) {
     $new_id = $nextTerm->id;
     $session->message('Resumption Date added Successfully.');
-    redirect_to(urlFor('/nextTerm/show.php?id=' . $new_id));
+    redirect_to(urlFor('/admin/nextTerm/show.php?id=' . $new_id));
   } else {
     //Show Errors$errors = $result;
   }

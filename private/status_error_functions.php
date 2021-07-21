@@ -3,7 +3,16 @@
 function require_login() {
   global $session;
   if(!$session->is_logged_in()) {
-    redirect_to(url_for('/staff/login.php'));
+    redirect_to(urlFor('/admin/login.php'));
+  } else {
+    // Do nothing, let the rest of the page proceed
+  }
+}
+
+function require_student_login() {
+  global $session;
+  if(!$session->is_student_logged_in()) {
+    redirect_to(urlFor('/students/login.php'));
   } else {
     // Do nothing, let the rest of the page proceed
   }

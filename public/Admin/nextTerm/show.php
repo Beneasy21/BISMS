@@ -28,7 +28,8 @@ $nextTerm = NextTerm::find_by_id($id);
             <a class="back-link" href="<?php echo urlFor('/admin/index.php'); ?>">&laquo; Back to Admin Home</a> || 
             <a class="back-link" href="<?php echo urlFor('/admin/nextTerm/index.php'); ?>">&laquo; Back to List</a> || 
             <a class="back-link" href="<?php echo urlFor('/admin/nextTerm/new.php'); ?>">&laquo; Add Term</a> || 
-            <a class="back-link" href="<?php echo urlFor('/admin/nextTerm/edit.php?id='.h(u($nextTerm->id))); ?>">Edit</a>
+            <a class="back-link" href="<?php echo urlFor('/admin/nextTerm/edit.php?id='.h(u($nextTerm->id))); ?>">Edit</a> || 
+            <a class="back-link" href="<?php echo urlFor('/admin/nextTerm/delete.php?id='.h(u($nextTerm->id))); ?>">Delete</a>
         </div>        
       </div>
       <div class="row mx-auto">
